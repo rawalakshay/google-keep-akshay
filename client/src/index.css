@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background: #202124;
+}
+
+p,
+h1,
+h2 {
+  color: #e8eaed;
+}
+
+.note {
+  border: 1px solid #5f6368;
+  border-radius: 8px;
+  width: 240px;
+  margin: 8px;
+  float: left;
+  background-color: #202124;
+}
+
+.note:hover {
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.7);
+  transition-duration: 0.218s;
+  transition-property: box-shadow;
+  transition-timing-function: ease-in;
+}
+
+.note-content {
+  margin: 0px;
+}
+
+.note h1 {
+  color: #e8eaed;
+  font-size: 1rem;
+  margin-bottom: 6px;
+  letter-spacing: 0.00625em;
+  font-weight: 600;
+  line-height: 1.5rem;
+
+  padding: 16px 16px 0 16px;
+  margin: 0;
+}
+.note p {
+  color: #e8eaed;
+  font-size: 0.875rem;
+  /* margin-bottom: 10px; */
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.01428571em;
+  font-weight: 400;
+  line-height: 1.25rem;
+  padding: 4px 16px 12px 16px;
+  margin: 0;
+}
+
+.note-icons {
+  display: flex;
+  line-height: 26px;
+  justify-content: space-around;
+  padding: 8px;
+}
+
+/* .note-icons:hover{
+  opacity: 0.7;
+} */
+
+.note button {
+  position: relative;
+  /* float: right; */
+  margin: 0 3px;
+  padding: 0;
+  opacity: 0.7;
+  color: #ffffff;
+  background-size: 18px 18px;
+  border: none;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0);
+  margin: 0 8px;
+}
+
+form.create-note {
+  position: relative;
+  width: 480px;
+  margin: 30px auto 20px auto;
+  background: #202124;
+  border: 0.5px solid rgba(255, 255, 255, 0.3);
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.5);
+}
+form.create-note input {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  background: #202124;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+  color: #e8eaed;
+}
+form.create-note textarea {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  background: #202124;
+  outline: none;
+  font-size: 1em;
+  font-family: inherit;
+  resize: none;
+  color: #e8eaed;
+}
+form.create-note button.add {
+  color: rgba(232, 234, 237, 0.6);
+  border: none;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  font-family: inherit;
+  text-transform: none;
+  font-weight: 400;
+  font-size: 1.1em;
+}
+
+.addButton {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
