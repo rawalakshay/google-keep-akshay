@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import Header from "./Header";
-// import Footer from "./Footer";
 import Note from "../components/Note";
 import CreateArea from "../components/CreateArea";
 import axios from "axios";
@@ -21,7 +19,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/notes")
+      .get("/api/notes")
       .then((response) => {
         let data = response.data;
         console.log(data);
@@ -52,7 +50,7 @@ function App() {
     };
 
     axios
-      .post(`http://localhost:3001/notes`, insertNote)
+      .post(`/api/notes`, insertNote)
       .then((res) => console.log("Send from react"));
 
     setNotes((preState) => {
@@ -66,8 +64,8 @@ function App() {
   }
 
   function deleteNote(noteID) {
-    axios.delete(`http://localhost:3001/notes/${noteID}`).then(() => {
-      axios.get("http://localhost:3001/notes").then((response) => {
+    axios.delete(`/api/notes/${noteID}`).then(() => {
+      axios.get("/api/notes").then((response) => {
         setNotes(response.data);
       });
     });
@@ -76,7 +74,6 @@ function App() {
 
   return (
     <div>
-      {/* <Header /> */}
       <CreateArea
         title={note.title}
         content={note.content}
@@ -94,7 +91,6 @@ function App() {
           deleteNote={deleteNote}
         />
       ))}
-      {/* <Footer /> */}
     </div>
   );
 }
